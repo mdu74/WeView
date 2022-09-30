@@ -4,5 +4,5 @@ namespace Services;
 
 public interface ISeriesService
 {
-    Task<List<SeriesEntity>> GetAllSeries();
+    Task<List<ShowEntity>> GetAllSeries();
 }

@@ -14,7 +14,7 @@ namespace WeWatchAPI.Controllers
             _seriesService = seriesService ?? throw new ArgumentNullException(nameof(seriesService));
         }
         [HttpGet]
-        public Task<List<SeriesEntity>> GetSeries()
+        public Task<List<ShowEntity>> GetSeries()
         {
             try
             {

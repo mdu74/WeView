@@ -10,7 +10,7 @@ namespace Services
 {
     public class SeriesService : ISeriesService
     {
-        public async Task<List<SeriesEntity>> GetAllSeries()
+        public async Task<List<ShowEntity>> GetAllSeries()
         {
             var client = new HttpClient();
             var request = new HttpRequestMessage
@@ -28,7 +28,7 @@ namespace Services
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
                 var json = JArray.Parse(body);
-                var series = json.ToObject<List<SeriesEntity>>();
+                var series = json.ToObject<List<ShowEntity>>();
                 return series;
             }
         }

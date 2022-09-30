@@ -1,6 +1,8 @@
-﻿namespace Services.Models;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class SeriesEntity
+namespace Services.Models;
+
+public class ShowEntity
 {
     public string epguides_name { get; set; }
     public string episodes { get; set; }
